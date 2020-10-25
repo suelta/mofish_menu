@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html><head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>上传菜谱步骤图片 - 美食杰</title>
+<script>
+function submitForm(){
+	document.getElementById("uploader").submit();
+	document.getElementById("clickToUpload").style.display = "none";
+}
+</script>
+<style>
+body {background:#f5f5f5; margin:0; padding:0;}
+.uploader {position:relative; width:58px;}
+.btn {width:91px; height:61px; background:none; border:none; color:#937E68; text-align:center; line-height:61px; font-size:12px; z-index:999;}
+.file {position:absolute; top:0; left:0; height:400px; filter:alpha(opacity:0); opacity:0; width:300px; cursor:pointer; font-size:180px; z-index:200;}
+#clickToUpload{position:relative;z-index:100;}
+.delimgbtn{height:32px;background:#333;background:rgba(0,0,0,0.5) url(https://s1.c.meishij.net/n/images/delimgicon.png) 0px 0px no-repeat;position:absolute;right:0px;top:0px;display:none;z-index:300;padding:0px;line-height:32px;font-size:12px;color:#fff;cursor:pointer;width:32px;text-indent:-9999px;}
+</style>
+<link rel="stylesheet" type="text/css" media="all" href="pic_step_data_009/upload.css"></head>
+<body style="position:relative;">
+<div id="upload_big_img_s">
+	<form method="POST" action="https://i.meishi.cc/iframe/upload_pic.php" id="uploader" enctype="multipart/form-data">
+		<input type="hidden" value="step" name="act">
+		<input type="hidden" value="0a1434002e87f382fcca68d89f079b10" id="step" name="step">
+		<input type="hidden" value="" id="tips" name="tips">
+		<input type="hidden" value="0" id="ret" name="ret">
+		<input type="hidden" value="" id="indexid" name="indexid">
+		<img id="clickToUpload" default_src="https://s1.c.meishij.net/n/images/upload_step_img.png?id=1562305683" src="pic_step_data_003/upload_step_img.png" width="180">
+		<input type="file" class="file" id="upload_top_img" name="photos" size="1" value="浏览" onchange="submitForm();">
+		<span class="delimgbtn" id="delimgbtn" style="display:none">x</span>
+<script type="text/javascript" src="pic_step_data_009/j.js"></script><script>
+$(function(){
+		$("#upload_big_img_s").hover(function(){
+		var default_src=$("#clickToUpload").attr("default_src");
+		var current_src=$("#clickToUpload").attr("src");
+		if(default_src!=current_src){
+			$("#delimgbtn").css("display","block");
+		}
+	},function(){
+		var default_src=$("#clickToUpload").attr("default_src");
+		var current_src=$("#clickToUpload").attr("src");
+		if(default_src!=current_src){
+			$("#delimgbtn").hide();
+		}
+	});
+	$("#delimgbtn").click(function(){
+		parent.document.getElementById('step_img_0a1434002e87f382fcca68d89f079b10').value = '';
+		$("#clickToUpload").attr("src","https://s1.c.meishij.net/n/images/upload_step_img.png");
+		$("#upload_big_img_s").unbind("hover");
+		$("#delimgbtn").hide();
+	});
+});
+</script>
+		<div class="uploading_s" id="uploading">上传中...</div>
+	</form>
+</div></body></html>

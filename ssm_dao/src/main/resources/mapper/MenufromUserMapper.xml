@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.mofish.dao.IMenufromUserDao">
+    <select id="findMenufromUser" parameterType="com.mofish.bean.MenufromUser" resultType="com.mofish.bean.MenufromUser">
+        select * from menufromuser where uid=#{uid}
+    </select>
+
+    <insert id="addMenufromUser" parameterType="com.mofish.bean.MenufromUser">
+        insert into menufromuser(uid,mid) values (uid=#{uid},mid=#{mid})
+    </insert>
+
+    <delete id="deleteMenufromUser" parameterType="com.mofish.bean.MenufromUser">
+        delete from menufromuser where mid=#{mid}
+    </delete>
+</mapper>

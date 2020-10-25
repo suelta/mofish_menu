@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.mofish.dao.IMenuMethodDao" >
+    <insert id="addMenuMethod" parameterType="com.mofish.bean.MenuMethod">
+        INSERT INTO menumethod(mid,mmdesc) VALUES (#{mid},#{mmdesc})
+    </insert>
+
+    <delete id="deleteMenuMethod" parameterType="com.mofish.bean.MenuMethod">
+        delete from menumethod where mid = #{mid}
+    </delete>
+
+    <select id="findMenuMethod" resultType="com.mofish.bean.MenuMethod" parameterType="int">
+        select * from menumethod where mid = #{mid}
+    </select>
+
+    <update id="updateMenuMethod" parameterType="com.mofish.bean.MenuMethod">
+        update menumethod set mmdesc = #{mmdesc} where mid = #{mid}
+    </update>
+
+</mapper>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.mofish.dao.IMenuLikeDao">
+    <select id="getMenuLike" parameterType="int" resultType="com.mofish.bean.MenuLike">
+        select * from menulike where mid=#{mid}
+    </select>
+
+    <update id="updateMenuLike" parameterType="com.mofish.bean.MenuLike">
+        UPDATE menulike SET mlcount=#{mlcount}+1 WHERE mid=#{mid}
+    </update>
+
+    <delete id="deleteMenuLike" parameterType="com.mofish.bean.MenuLike">
+        delete from menulike where mid=#{mid}
+    </delete>
+
+    <insert id="addMenuLike" parameterType="int">
+        insert into menulike(mid,mlcount) values (#{mid},0)
+    </insert>
+
+
+    <select id="getPopularMenu" parameterType="int" resultType="com.mofish.bean.MenuLike">
+        select * from menulike where mlcount > #{likeCount}
+    </select>
+</mapper>

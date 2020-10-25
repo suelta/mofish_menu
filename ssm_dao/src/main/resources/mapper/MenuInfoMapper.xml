@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.mofish.dao.IMenuInfoDao" >
+    <insert id="addMenuInfo" parameterType="com.mofish.bean.MenuInfo">
+        INSERT INTO menuinfo(uid,muptime,mname) VALUES (#{uid},#{muptime},#{mname})
+    </insert>
+
+    <delete id="deleteMenuInfo" parameterType="com.mofish.bean.MenuInfo">
+        delete from menuinfo where mid = #{mid}
+    </delete>
+
+    <update id="updateMeunInfo" parameterType="com.mofish.bean.MenuInfo">
+        update menuinfo set uid = #{uid} , mname = #{mname} , muptime = #{muptime} where mid = #{mid}
+    </update>
+
+    <select id="findAllMenuInfo" parameterType="com.mofish.bean.MenuInfo" resultType="com.mofish.bean.MenuInfo">
+        select * from menuinfo
+    </select>
+
+    <select id="findMenuInfoByMid" resultType="com.mofish.bean.MenuInfo" parameterType="int">
+        select * from menuinfo where mid = #{mid}
+    </select>
+
+    <select id="findMenuInfoByUid" parameterType="int" resultType="com.mofish.bean.MenuInfo">
+        select * from menuinfo where uid=#{uid}
+    </select>
+
+    <select id="findMenuInfoByMaxMid" resultType="com.mofish.bean.MenuInfo">
+        select * from menuinfo where mid in (select max(mid) from menuinfo)
+    </select>
+
+</mapper>

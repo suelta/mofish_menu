@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.mofish.dao.IMenuTagDao" >
+    <insert id="addMenuTag" parameterType="com.mofish.bean.MenuTag">
+        INSERT INTO menutag(mid,tcid) VALUES (#{mid},#{tcid})
+    </insert>
+
+    <delete id="deleteMenuTag" parameterType="com.mofish.bean.MenuTag">
+        delete from menutag where mid = #{mid}
+    </delete>
+
+    <select id="findMenuTag" resultType="com.mofish.bean.MenuTag" parameterType="int">
+        select * from menutag where mid = #{mid}
+    </select>
+
+    <update id="updateMenuTag" parameterType="com.mofish.bean.MenuTag">
+        update menutag set tcid = #{tcid} where mid = #{mid}
+    </update>
+
+</mapper>

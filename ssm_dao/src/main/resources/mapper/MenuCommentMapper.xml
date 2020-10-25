@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.mofish.dao.IMenuCommentDao" >
+    <insert id="addMenuComment" parameterType="com.mofish.bean.MenuComment">
+        INSERT INTO menucomment (mcid,mid,uid,mctext,mctime) VALUES (#{mcid},#{mid},#{uid},#{mctext},#{mctime})
+    </insert>
+
+    <delete id="deleteMenuComment" parameterType="int">
+        delete from menucomment where mid = #{mid}
+    </delete>
+
+    <select id="findMenuCommentByMid" parameterType="int" resultType="com.mofish.bean.MenuComment">
+        select * from menucomment where mid = #{mid}
+    </select>
+
+</mapper>

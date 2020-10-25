@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.mofish.dao.IUserInfoDao" >
+    <select id="findUserByUname" parameterType="com.mofish.bean.UserInfo" resultType="com.mofish.bean.UserInfo">
+        select * from userinfo where uname=#{uname}
+    </select>
+
+    <select id="findUserByUid" parameterType="int" resultType="com.mofish.bean.UserInfo">
+        select * from userinfo where uid=#{uid}
+    </select>
+
+    <select id="findUserByTel" parameterType="String" resultType="com.mofish.bean.UserInfo">
+            select * from userinfo where utel=#{utel}
+        </select>
+
+    <insert id="addUser" parameterType="com.mofish.bean.UserInfo">
+        insert
+        into userinfo(uname,upwd,ugender,utel,ubirth,urgtime)
+        values (#{uname},#{upwd},#{ugender},#{utel},#{ubirth},#{urgtime})
+    </insert>
+
+    <update id="updateUser" parameterType="com.mofish.bean.UserInfo">
+        update userinfo
+        set uname=#{uname},upwd=#{upwd},ugender=#{ugender},utel=#{utel},ubirth=#{ubirth}
+        where uid=#{uid}
+    </update>
+
+</mapper>
