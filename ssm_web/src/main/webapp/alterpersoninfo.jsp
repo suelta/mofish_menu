@@ -110,7 +110,7 @@
                 <div class="row align-items-center">
                     <div class="col-lg-3 col-md-4 col-5">
                         <div class="logo-area">
-                            <a href="index.jsp"><img src="/assets/images/logo/logo.png" alt=""></a>
+                            <a href="${pageContext.request.contextPath}/mainmenu/getMainMenu.do"><img src="/assets/images/logo/logo.png" alt=""></a>
                         </div>
                     </div>
                     <div class="col-lg-5 col-md-6">
