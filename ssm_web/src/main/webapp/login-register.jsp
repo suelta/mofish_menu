@@ -326,8 +326,8 @@
                 <div class="col-12">
                     <!-- breadcrumb-list start -->
                     <ul class="breadcrumb-list">
-                        <li class="breadcrumb-item"><a href="${pageContext.request.contextPath}/skip/tomain.do">Home</a></li>
-                        <li class="breadcrumb-item active">login &amp; register</li>
+                        <li class="breadcrumb-item"><a href="${pageContext.request.contextPath}/skip/tomain.do">我的主页</a></li>
+                        <li class="breadcrumb-item active">登陆 &amp; 注册</li>
                     </ul>
                     <!-- breadcrumb-list end -->
                 </div>
@@ -348,10 +348,10 @@
                         <div class="login-register-tab-list nav">
                             <%--????--%>
                             <a class="active" data-toggle="tab" href="#lg1">
-                                <h4> login </h4>
+                                <h4> 登陆 </h4>
                             </a>
                             <a data-toggle="tab" href="#lg2">
-                                <h4> register </h4>
+                                <h4> 注册 </h4>
                             </a>
                         </div>
                         <!-- login-register-tab-list end -->
@@ -442,7 +442,7 @@
                         <div class="widget-footer mt-40">
                             <h6 class="title-widget">信息</h6>
                             <ul class="footer-list">
-                                <li><a href="#">Home</a></li>
+                                <li><a href="#">我的主页</a></li>
                                 <li><a href="#">关于我们</a></li>
                                 <li><a href="#">快速联系</a></li>
                             </ul>

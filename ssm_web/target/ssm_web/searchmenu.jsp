@@ -379,10 +379,10 @@
                                     <div class="product-short">
                                         <p>Sort By :</p>
                                         <select class="nice-select" name="sortby">
-                                            <option value="trending">Relevance</option>
-                                            <option value="sales">Name(A - Z)</option>
-                                            <option value="sales">Name(Z - A)</option>
-                                            <option value="rating">Price(Low > High)</option>
+                                            <option value="trending">相关性</option>
+                                            <option value="sales">名称顺序</option>
+                                            <option value="sales">名称逆序</option>
+                                            <option value="rating">价格由低到高</option>
                                             <option value="date">Rating(Lowest)</option>
                                         </select>
                                     </div>
@@ -566,7 +566,7 @@
                         <div class="widget-footer mt-40">
                             <h6 class="title-widget">信息</h6>
                             <ul class="footer-list">
-                                <li><a href="#">Home</a></li>
+                                <li><a href="#">我的主页</a></li>
                                 <li><a href="#">关于我们</a></li>
                                 <li><a href="#">快速联系</a></li>
                             </ul>

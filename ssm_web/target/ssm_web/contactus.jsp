@@ -327,8 +327,8 @@
                 <div class="col-12">
                     <!-- breadcrumb-list start -->
                     <ul class="breadcrumb-list">
-                        <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-                        <li class="breadcrumb-item active">Contact Us</li>
+                        <li class="breadcrumb-item"><a href="index.html">我的主页</a></li>
+                        <li class="breadcrumb-item active">联系我们</li>
                     </ul>
                     <!-- breadcrumb-list end -->
                 </div>
@@ -383,7 +383,7 @@
                     <div class="col-lg-7 offset-lg-1">
                         <div class="contact-info-wrap">
                             <div class="contact-title mb-30">
-                                <h3>Tell Us Your Message</h3>
+                                <h3>您的建议或意见</h3>
                             </div>
 
                             <div class="contact-us-from-wrap">
@@ -391,25 +391,25 @@
                                     <div class="row">
                                         <div class="col-lg-12">
                                             <div class="single-input">
-                                                <label> Your Name (required)</label>
+                                                <label> 名字 (必填)</label>
                                                 <input name="con_name" type="text">
                                             </div>
                                         </div>
                                         <div class="col-lg-12">
                                             <div class="single-input">
-                                                <label> Your Email (required)</label>
+                                                <label> 邮箱 (必填)</label>
                                                 <input name="con_email" type="email">
                                             </div>
                                         </div>
                                         <div class="col-lg-12">
                                             <div class="single-input">
-                                                <label>Subject</label>
+                                                <label>主题</label>
                                                 <input name="con_subject" type="text">
                                             </div>
                                         </div>
                                         <div class="col-lg-12">
                                             <div class="single-input">
-                                                <label>Your Meassage</label>
+                                                <label>你的意见</label>
                                                 <textarea name="con_message" ></textarea>
                                             </div>
                                         </div>
@@ -460,7 +460,7 @@
                         <div class="widget-footer mt-40">
                             <h6 class="title-widget">信息</h6>
                             <ul class="footer-list">
-                                <li><a href="#">Home</a></li>
+                                <li><a href="#">我的主页</a></li>
                                 <li><a href="#">关于我们</a></li>
                                 <li><a href="#">快速联系</a></li>
                             </ul>
