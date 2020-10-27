@@ -99,16 +99,58 @@
 
             <div class="container">
                 <div class="row">
-                    <div class="col-lg-6">
-                        <div class="header-top-settings">
-                            <ul class="nav align-items-center">
-                                <li class="language">中文 <i class="fa fa-angle-down"></i>
-                                    <ul class="dropdown-list">
-                                        <li><a href="#">中文</a></li>
-                                        <li><a href="#">English</a></li>
-                                    </ul>
-                                </li>
-                            </ul>
+                    <div class="col-lg-6 d-none d-lg-block">
+
+                        <div class="main-menu-area white_text">
+                            <!--  Start Mainmenu Nav-->
+                            <nav class="main-navigation">
+                                <ul>
+                                    <li class="active"><a href="${pageContext.request.contextPath}/mainmenu/getMainMenu.do">主页 <i class="fa fa-angle-down"></i></a>
+                                        <%--<ul class="sub-menu">
+                                            <li><a href="index.html">Home Page 1</a></li>
+                                            <li><a href="index-2.html">Home Page 2</a></li>
+                                            <li><a href="index-3.html">Home Page 3</a></li>
+                                            <li><a href="index-4.html">Home Page 4</a></li>
+                                        </ul>--%>
+                                    </li>
+
+                                    <li><a href="#">菜谱大全 <i class="fa fa-angle-down"></i></a>
+                                        <ul class="mega-menu">
+                                            <li><a href="#">八大菜系</a>
+                                                <ul>
+                                                    <li><a href="${pageContext.request.contextPath}/checksametag/getSameMenu.do?tcid=1&page=1&size=8">川&emsp;菜</a></li>
+                                                    <li><a href="${pageContext.request.contextPath}/checksametag/getSameMenu.do?tcid=2&page=1&size=8">粤&emsp;菜</a></li>
+                                                    <li><a href="${pageContext.request.contextPath}/checksametag/getSameMenu.do?tcid=3&page=1&size=8">鲁&emsp;菜</a></li>
+                                                    <li><a href="${pageContext.request.contextPath}/checksametag/getSameMenu.do?tcid=4&page=1&size=8">苏&emsp;菜</a></li>
+                                                    <li><a href="${pageContext.request.contextPath}/checksametag/getSameMenu.do?tcid=5&page=1&size=8">浙&emsp;菜</a></li>
+                                                    <li><a href="${pageContext.request.contextPath}/checksametag/getSameMenu.do?tcid=6&page=1&size=8">徽&emsp;菜</a></li>
+                                                    <li><a href="${pageContext.request.contextPath}/checksametag/getSameMenu.do?tcid=7&page=1&size=8">闽&emsp;菜</a></li>
+                                                    <li><a href="${pageContext.request.contextPath}/checksametag/getSameMenu.do?tcid=8&page=1&size=8">湘&emsp;菜</a></li>
+                                                </ul>
+                                            </li>
+                                            <li><a href="#">家常菜谱</a>
+                                                <ul>
+                                                    <li><a href="${pageContext.request.contextPath}/checksametag/getSameMenu.do?tcid=9&page=1&size=8">海&emsp;鲜</a></li>
+                                                    <li><a href="${pageContext.request.contextPath}/checksametag/getSameMenu.do?tcid=10&page=1&size=8">热&emsp;菜</a></li>
+                                                    <li><a href="${pageContext.request.contextPath}/checksametag/getSameMenu.do?tcid=11&page=1&size=8">凉&emsp;菜</a></li>
+                                                    <li><a href="${pageContext.request.contextPath}/checksametag/getSameMenu.do?tcid=12&page=1&size=8">素&emsp;食</a></li>
+                                                </ul>
+                                            </li>
+                                            <li><a href="#">一日三餐</a>
+                                                <ul>
+                                                    <li><a href="${pageContext.request.contextPath}/checksametag/getSameMenu.do?tcid=13&page=1&size=8">早&emsp;餐</a></li>
+                                                    <li><a href="${pageContext.request.contextPath}/checksametag/getSameMenu.do?tcid=14&page=1&size=8">午&emsp;餐</a></li>
+                                                    <li><a href="${pageContext.request.contextPath}/checksametag/getSameMenu.do?tcid=15&page=1&size=8">晚&emsp;餐</a></li>
+                                                    <li><a href="${pageContext.request.contextPath}/checksametag/getSameMenu.do?tcid=16&page=1&size=8">夜&emsp;宵</a></li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+
+                                    </li>
+                                    <li><a href="${pageContext.request.contextPath}/skip/tocontactus.do">联系我们</a></li>
+                                </ul>
+                            </nav>
+
                         </div>
                     </div>
                     <div class="col-lg-6">
@@ -188,176 +230,130 @@
         </div>
         <!-- haeader Mid End -->
 
-        <!-- haeader bottom Start -->
-        <div class="haeader-bottom-area bg-gren header-sticky">
-            <div class="container">
-                <div class="row align-items-center">
-                    <div class="col-lg-9 d-none d-lg-block">
 
-                        <div class="main-menu-area white_text">
-                            <!--  Start Mainmenu Nav-->
-                            <nav class="main-navigation">
-                                <ul>
-                                    <li class="active"><a href="${pageContext.request.contextPath}/mainmenu/getMainMenu.do">主页 <i class="fa fa-angle-down"></i></a>
-                                        <%--<ul class="sub-menu">
-                                            <li><a href="index.html">Home Page 1</a></li>
-                                            <li><a href="index-2.html">Home Page 2</a></li>
-                                            <li><a href="index-3.html">Home Page 3</a></li>
-                                            <li><a href="index-4.html">Home Page 4</a></li>
-                                        </ul>--%>
-                                    </li>
+        <%--<!-- off-canvas menu start -->--%>
+        <%--<aside class="off-canvas-wrapper">--%>
+        <%--<div class="off-canvas-overlay"></div>--%>
+        <%--<div class="off-canvas-inner-content">--%>
+        <%--<div class="btn-close-off-canvas">--%>
+        <%--<i class="icon-x"></i>--%>
+        <%--</div>--%>
 
-                                    <li><a href="#">菜谱大全 <i class="fa fa-angle-down"></i></a>
-                                        <ul class="mega-menu">
-                                            <li><a href="#">八大菜系</a>
-                                                <ul>
-                                                    <li><a href="${pageContext.request.contextPath}/checksametag/getSameMenu.do?tcid=1&page=1&size=8">川 菜</a></li>
-                                                    <li><a href="${pageContext.request.contextPath}/checksametag/getSameMenu.do?tcid=2&page=1&size=8">粤 菜</a></li>
-                                                    <li><a href="${pageContext.request.contextPath}/checksametag/getSameMenu.do?tcid=3&page=1&size=8">鲁 菜</a></li>
-                                                    <li><a href="${pageContext.request.contextPath}/checksametag/getSameMenu.do?tcid=4&page=1&size=8">苏 菜</a></li>
-                                                    <li><a href="${pageContext.request.contextPath}/checksametag/getSameMenu.do?tcid=5&page=1&size=8">浙 菜</a></li>
-                                                    <li><a href="${pageContext.request.contextPath}/checksametag/getSameMenu.do?tcid=6&page=1&size=8">徽 菜</a></li>
-                                                    <li><a href="${pageContext.request.contextPath}/checksametag/getSameMenu.do?tcid=7&page=1&size=8">闽 菜</a></li>
-                                                    <li><a href="${pageContext.request.contextPath}/checksametag/getSameMenu.do?tcid=8&page=1&size=8">湘 菜</a></li>
-                                                </ul>
-                                            </li>
-                                            <li><a href="#">家常菜谱</a>
-                                                <ul>
-                                                    <li><a href="${pageContext.request.contextPath}/checksametag/getSameMenu.do?tcid=9&page=1&size=8">海 鲜</a></li>
-                                                    <li><a href="${pageContext.request.contextPath}/checksametag/getSameMenu.do?tcid=10&page=1&size=8">热 菜</a></li>
-                                                    <li><a href="${pageContext.request.contextPath}/checksametag/getSameMenu.do?tcid=11&page=1&size=8">凉 菜</a></li>
-                                                    <li><a href="${pageContext.request.contextPath}/checksametag/getSameMenu.do?tcid=12&page=1&size=8">素 食</a></li>
-                                                </ul>
-                                            </li>
-                                            <li><a href="#">家常菜谱</a>
-                                                <ul>
-                                                    <li><a href="${pageContext.request.contextPath}/checksametag/getSameMenu.do?tcid=13&page=1&size=8">早 餐</a></li>
-                                                    <li><a href="${pageContext.request.contextPath}/checksametag/getSameMenu.do?tcid=14&page=1&size=8">午 餐</a></li>
-                                                    <li><a href="${pageContext.request.contextPath}/checksametag/getSameMenu.do?tcid=15&page=1&size=8">晚 餐</a></li>
-                                                    <li><a href="${pageContext.request.contextPath}/checksametag/getSameMenu.do?tcid=16&page=1&size=8">夜 宵</a></li>
-                                                </ul>
-                                            </li>
-                                        </ul>
+        <%--<div class="off-canvas-inner">--%>
 
-                                    </li>
+        <%--<div class="search-box-offcanvas">--%>
+        <%--<form>--%>
+        <%--<input type="text" placeholder="Search product...">--%>
+        <%--<button class="search-btn"><i class="icon-search"></i></button>--%>
+        <%--</form>--%>
+        <%--</div>--%>
 
-                                    <li><a href="#">相关 <i class="fa fa-angle-down"></i></a>
-                                        <ul class="sub-menu">
-                                            <li><a href="#">FAQ</a></li>
-                                            <li><a href="#">My Account</a></li>
-                                            <li><a href="#">login &amp; register</a></li>
-                                        </ul>
-                                    </li>
-                                    <li><a href="${pageContext.request.contextPath}/skip/toaboutus.do">关于我们</a></li>
-                                    <li><a href="${pageContext.request.contextPath}/skip/tocontactus.do">联系我们</a></li>
-                                </ul>
-                            </nav>
+        <%--<!-- mobile menu start -->--%>
+        <%--<div class="mobile-navigation">--%>
 
-                        </div>
-                    </div>
-
-                    <div class="col-5 col-md-6 d-block d-lg-none">
-                        <div class="logo"><a href="index.html"><img src="/assets/images/logo/logo.png" alt=""></a></div>
-                    </div>
-
-                    <div class="col-lg-3 col-md-6 col-7">
-                        <div class="right-blok-box text-white d-flex">
-
-                            <div class="mobile-menu-btn d-block d-lg-none">
-                                <div class="off-canvas-btn">
-                                    <a href="#"><img src="/assets/images/icon/bg-menu.png" alt=""></a>
-                                </div>
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- haeader bottom End -->
-
-
-        <!-- off-canvas menu start -->
-        <aside class="off-canvas-wrapper">
-            <div class="off-canvas-overlay"></div>
-            <div class="off-canvas-inner-content">
-                <div class="btn-close-off-canvas">
-                    <i class="icon-x"></i>
-                </div>
-
-                <div class="off-canvas-inner">
-
-                    <div class="search-box-offcanvas">
-                        <form>
-                            <input type="text" placeholder="Search product...">
-                            <button class="search-btn"><i class="icon-search"></i></button>
-                        </form>
-                    </div>
-
-                    <!-- mobile menu start -->
-                    <div class="mobile-navigation">
-
-                        <!-- mobile menu navigation start -->
-                        <nav>
-                            <ul class="mobile-menu">
-                                <li class="current"><a class="link pngFix" href="index.jsp"></a> </li>
-
-                                <li class="menu-item-has-children"><a href="#">菜谱大全</a>
-
-                                </li>
-
-                                <li class="menu-item-has-children "><a href="#">Pages</a>
-                                    <ul class="dropdown">
-                                        <li><a href="frequently-questions.html">FAQ</a></li>
-                                        <li><a href="my-account.html">My Account</a></li>
-                                        <li><a href="login-register.html">login &amp; register</a></li>
-                                    </ul>
-                                </li>
-                                <li><a href="about-us.html">About Us</a></li>
-                                <li><a href="contact-us.html">Contact</a></li>
-                            </ul>
-                        </nav>
-                        <!-- mobile menu navigation end -->
-                    </div>
-                    <!-- mobile menu end -->
+        <%--<!-- mobile menu navigation start -->--%>
+        <%--<nav>--%>
+        <%--<ul class="mobile-menu">--%>
+        <%--<li class="current"><a class="link pngFix" href="index.jsp"></a> </li>--%>
+        <%--&lt;%&ndash;<li class="menu-item-has-children"><a href="#">Home</a>--%>
+        <%--<ul class="dropdown">--%>
+        <%--<li><a href="index.html">Home Page 1</a></li>--%>
+        <%--<li><a href="index-2.html">Home Page 2</a></li>--%>
+        <%--<li><a href="index-3.html">Home Page 3</a></li>--%>
+        <%--<li><a href="index-4.html">Home Page 4</a></li>--%>
+        <%--</ul>--%>
+        <%--</li>&ndash;%&gt;--%>
+        <%--<li class="menu-item-has-children"><a href="#">菜谱大全</a>--%>
+        <%--&lt;%&ndash;<ul class="megamenu dropdown">--%>
+        <%--<li class="mega-title has-children"><a href="#">Shop Layouts</a>--%>
+        <%--<ul class="dropdown">--%>
+        <%--<li><a href="shop.html">Shop Left Sidebar</a></li>--%>
+        <%--<li><a href="shop-right-sidebar.html">Shop Right Sidebar</a></li>--%>
+        <%--<li><a href="shop-list-left.html">Shop List Left Sidebar</a></li>--%>
+        <%--<li><a href="shop-list-right.html">Shop List Right Sidebar</a></li>--%>
+        <%--<li><a href="shop-fullwidth.html">Shop Full Width</a></li>--%>
+        <%--</ul>--%>
+        <%--</li>--%>
+        <%--<li class="mega-title has-children"><a href="#">Product Details</a>--%>
+        <%--<ul class="dropdown">--%>
+        <%--<li><a href="product-details.html">Single Product Details</a></li>--%>
+        <%--<li><a href="variable-product-details.html">Variable Product Details</a></li>--%>
+        <%--<li><a href="external-product-details.html">External Product Details</a></li>--%>
+        <%--<li><a href="gallery-product-details.html">Gallery Product Details</a></li>--%>
+        <%--</ul>--%>
+        <%--</li>--%>
+        <%--<li class="mega-title has-children"><a href="#">Shop Pages</a>--%>
+        <%--<ul class="dropdown">--%>
+        <%--<li><a href="error404.html">Error 404</a></li>--%>
+        <%--<li><a href="compare.html">Compare Page</a></li>--%>
+        <%--<li><a href="cart.html">Cart Page</a></li>--%>
+        <%--<li><a href="checkout.html">Checkout Page</a></li>--%>
+        <%--<li><a href="wishlist.html">Wish List Page</a></li>--%>
+        <%--</ul>--%>
+        <%--</li>--%>
+        <%--</ul>&ndash;%&gt;--%>
+        <%--</li>--%>
+        <%--&lt;%&ndash;<li class="menu-item-has-children "><a href="#">Blog</a>--%>
+        <%--<ul class="dropdown">--%>
+        <%--<li><a href="blog.html">Blog Left Sidebar</a></li>--%>
+        <%--<li><a href="blog-right-sidebar.html">Blog Right Sidebar</a></li>--%>
+        <%--<li><a href="blog-grid.html">Blog Grid Page</a></li>--%>
+        <%--<li><a href="blog-largeimage.html">Blog Large Image</a></li>--%>
+        <%--<li><a href="blog-details.html">Blog Details Page</a></li>--%>
+        <%--</ul>--%>
+        <%--</li>&ndash;%&gt;--%>
+        <%--<li class="menu-item-has-children "><a href="#">Pages</a>--%>
+        <%--<ul class="dropdown">--%>
+        <%--<li><a href="frequently-questions.html">FAQ</a></li>--%>
+        <%--<li><a href="my-account.html">My Account</a></li>--%>
+        <%--<li><a href="login-register.html">login &amp; register</a></li>--%>
+        <%--</ul>--%>
+        <%--</li>--%>
+        <%--<li><a href="about-us.html">About Us</a></li>--%>
+        <%--<li><a href="contact-us.html">Contact</a></li>--%>
+        <%--</ul>--%>
+        <%--</nav>--%>
+        <%--<!-- mobile menu navigation end -->--%>
+        <%--</div>--%>
+        <%--<!-- mobile menu end -->--%>
 
 
-                    <div class="header-top-settings offcanvas-curreny-lang-support">
-                        <h5>My Account</h5>
-                        <ul class="nav align-items-center">
-                            <li class="language">English <i class="fa fa-angle-down"></i>
-                                <ul class="dropdown-list">
-                                    <li><a href="#">English</a></li>
-                                    <li><a href="#">French</a></li>
-                                </ul>
-                            </li>
-                            <li class="curreny-wrap">Currency <i class="fa fa-angle-down"></i>
-                                <ul class="dropdown-list curreny-list">
-                                    <li><a href="#">$ USD</a></li>
-                                    <li><a href="#"> € EURO</a></li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </div>
+        <%--<div class="header-top-settings offcanvas-curreny-lang-support">--%>
+        <%--<h5>My Account</h5>--%>
+        <%--<ul class="nav align-items-center">--%>
+        <%--<li class="language">English <i class="fa fa-angle-down"></i>--%>
+        <%--<ul class="dropdown-list">--%>
+        <%--<li><a href="#">English</a></li>--%>
+        <%--<li><a href="#">French</a></li>--%>
+        <%--</ul>--%>
+        <%--</li>--%>
+        <%--<li class="curreny-wrap">Currency <i class="fa fa-angle-down"></i>--%>
+        <%--<ul class="dropdown-list curreny-list">--%>
+        <%--<li><a href="#">$ USD</a></li>--%>
+        <%--<li><a href="#"> € EURO</a></li>--%>
+        <%--</ul>--%>
+        <%--</li>--%>
+        <%--</ul>--%>
+        <%--</div>--%>
 
-                    <!-- offcanvas widget area start -->
-                    <div class="offcanvas-widget-area">
-                        <div class="top-info-wrap text-left text-black">
-                            <h5>My Account</h5>
-                            <ul class="offcanvas-account-container">
-                                <li><a href="my-account.html">My account</a></li>
-                                <li><a href="cart.html">Cart</a></li>
-                                <li><a href="wishlist.html">Wishlist</a></li>
-                                <li><a href="checkout.html">Checkout</a></li>
-                            </ul>
-                        </div>
+        <%--<!-- offcanvas widget area start -->--%>
+        <%--<div class="offcanvas-widget-area">--%>
+        <%--<div class="top-info-wrap text-left text-black">--%>
+        <%--<h5>My Account</h5>--%>
+        <%--<ul class="offcanvas-account-container">--%>
+        <%--<li><a href="my-account.html">My account</a></li>--%>
+        <%--<li><a href="cart.html">Cart</a></li>--%>
+        <%--<li><a href="wishlist.html">Wishlist</a></li>--%>
+        <%--<li><a href="checkout.html">Checkout</a></li>--%>
+        <%--</ul>--%>
+        <%--</div>--%>
 
-                    </div>
-                    <!-- offcanvas widget area end -->
-                </div>
-            </div>
-        </aside>
-        <!-- off-canvas menu end -->
+        <%--</div>--%>
+        <%--<!-- offcanvas widget area end -->--%>
+        <%--</div>--%>
+        <%--</div>--%>
+        <%--</aside>--%>
+        <%--<!-- off-canvas menu end -->--%>
     </header>
 
     <!-- breadcrumb-area start -->
