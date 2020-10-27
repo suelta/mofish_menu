@@ -481,7 +481,7 @@
                                             <li><a href="${pageContext.request.contextPath}/checksametag/getSameMenu.do?tcid=${tagClass.tcid}&page=${pagenum}&size=8">${pagenum}</a> </li>
                                         </c:forEach>
                                         <li>
-                                            <a class="Next" href="${pageContext.request.contextPath}/checksametag/getSameMenu.do?tcid=${tagClass.tcid}&page=${menuInfoPage.pageNum+1}&size=8">Next</a>
+                                            <a class="Next" href="${pageContext.request.contextPath}/checksametag/getSameMenu.do?tcid=${tagClass.tcid}&page=${menuInfoPage.pageNum+1}&size=8">下一页</a>
                                         </li>
                                             <li><a>第${menuInfoPage.pageNum}页</a> </li>
 
@@ -527,7 +527,7 @@
                         <div class="widget-footer mt-40">
                             <h6 class="title-widget">信息</h6>
                             <ul class="footer-list">
-                                <li><a href="#">主页</a></li>
+                                <li><a href="${pageContext.request.contextPath}/mainmenu/getMainMenu.do">主页</a></li>
                                 <li><a href="#">关于我们</a></li>
                                 <li><a href="#">快速联系</a></li>
                             </ul>

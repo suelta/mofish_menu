@@ -369,7 +369,7 @@
                 <div class="col-12">
                     <!-- breadcrumb-list start -->
                     <ul class="breadcrumb-list">
-                        <li class="breadcrumb-item"><a href="index.html">我的主页</a></li>
+                        <li class="breadcrumb-item"><a href="${pageContext.request.contextPath}/mainmenu/getMainMenu.do">我的主页</a></li>
                         <li class="breadcrumb-item active">上传菜谱</li>
                     </ul>
                     <!-- breadcrumb-list end -->
@@ -606,7 +606,7 @@
                         <div class="widget-footer mt-40">
                             <h6 class="title-widget">Information</h6>
                             <ul class="footer-list">
-                                <li><a href="#">我的主页</a></li>
+                                <li><a href="${pageContext.request.contextPath}/mainmenu/getMainMenu.do">我的主页</a></li>
                                 <li><a href="#">关于我们</a></li>
                                 <li><a href="#">Quick Contact</a></li>
                                 <li><a href="#">Blog Pages</a></li>
@@ -619,7 +619,7 @@
                         <div class="widget-footer mt-40">
                             <h6 class="title-widget">Extras</h6>
                             <ul class="footer-list">
-                                <li><a href="#">我的主页</a></li>
+                                <li><a href="${pageContext.request.contextPath}/mainmenu/getMainMenu.do">我的主页</a></li>
                                 <li><a href="#">关于我们</a></li>
                                 <li><a href="#">Quick Contact</a></li>
                                 <li><a href="#">Blog Pages</a></li>

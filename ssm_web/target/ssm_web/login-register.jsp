@@ -363,17 +363,17 @@
                                         <%-- action="${pageContext.request.contextPath}/user/login.do" --%>
                                         <form action="${pageContext.request.contextPath}/user/userLogin.do" method="post" id="userForm">
                                             <div class="login-input-box">
-                                                <input type="text" name="utel" placeholder="User Telphone">
-                                                <input type="password" name="upwd" placeholder="Password">
+                                                <input type="text" name="utel" placeholder="用户手机号">
+                                                <input type="password" name="upwd" placeholder="密码">
                                             </div>
                                             <div class="button-box">
                                                 <div class="login-toggle-btn">
                                                     <input type="checkbox">
-                                                    <label>Remember me</label>
-                                                    <a href="#">Forgot Password?</a>
+                                                    <label>记住账号密码</label>
+                                                    <a href="#">忘记密码?</a>
                                                 </div>
                                                 <div class="button-box">
-                                                    <button class="login-btn btn" type="button" onclick="userLogin()"><span>Login</span></button>
+                                                    <button class="login-btn btn" type="button" onclick="userLogin()"><span>登录</span></button>
                                                 </div>
                                             </div>
                                         </form>
@@ -442,7 +442,7 @@
                         <div class="widget-footer mt-40">
                             <h6 class="title-widget">信息</h6>
                             <ul class="footer-list">
-                                <li><a href="#">我的主页</a></li>
+                                <li><a href="${pageContext.request.contextPath}/mainmenu/getMainMenu.do">我的主页</a></li>
                                 <li><a href="#">关于我们</a></li>
                                 <li><a href="#">快速联系</a></li>
                             </ul>

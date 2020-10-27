@@ -109,24 +109,24 @@ public class MainMenuController {
         DayUserInfoList.add(dinnerUserInfo);
         DayMenuLikeList.add(dinnerMenuLike);
 
-        /**
-         * 推荐晚餐
-         */
-        menuTag.setTcid(16);
-        //获取mname
-        List<MenuInfo> midnight_snackList = checkSameTagService.getSameMenu(menuTag);
-        //随机选择一个
-        bound = midnight_snackList.size();
-        random = new Random();
-        randNum = random.nextInt(bound);
-        midnight_snack = midnight_snackList.get(randNum);
-        //获取uname
-        UserInfo midnight_snackUserInfo = checkSameTagService.findUserByUid(midnight_snack.getUid());
-        //获取mlcount
-        MenuLike midnight_snackMenuLike = checkSameTagService.findMlByMid(midnight_snack.getMid());
-        DayMenuInfoList.add(midnight_snack);
-        DayUserInfoList.add(midnight_snackUserInfo);
-        DayMenuLikeList.add(midnight_snackMenuLike);
+//        /**
+//         * 推荐晚餐
+//         */
+//        menuTag.setTcid(16);
+//        //获取mname
+//        List<MenuInfo> midnight_snackList = checkSameTagService.getSameMenu(menuTag);
+//        //随机选择一个
+//        bound = midnight_snackList.size();
+//        random = new Random();
+//        randNum = random.nextInt(bound);
+//        midnight_snack = midnight_snackList.get(randNum);
+//        //获取uname
+//        UserInfo midnight_snackUserInfo = checkSameTagService.findUserByUid(midnight_snack.getUid());
+//        //获取mlcount
+//        MenuLike midnight_snackMenuLike = checkSameTagService.findMlByMid(midnight_snack.getMid());
+//        DayMenuInfoList.add(midnight_snack);
+//        DayUserInfoList.add(midnight_snackUserInfo);
+//        DayMenuLikeList.add(midnight_snackMenuLike);
 
         mv.addObject("dayMenuInfoList", DayMenuInfoList);
         mv.addObject("dayUserInfoList", DayUserInfoList);

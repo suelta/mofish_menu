@@ -364,7 +364,7 @@
                     <!-- breadcrumb-list start -->
                     <ul class="breadcrumb-list">
                         <li class="breadcrumb-item"><a href="${pageContext.request.contextPath}/skip/tomain.do">我的主页</a></li>
-                        <li class="breadcrumb-item active">Person Infomation</li>
+                        <li class="breadcrumb-item active">个人信息</li>
                     </ul>
                     <!-- breadcrumb-list end -->
                 </div>
@@ -508,7 +508,7 @@
                         <div class="widget-footer mt-40">
                             <h6 class="title-widget">信息</h6>
                             <ul class="footer-list">
-                                <li><a href="#">我的主页</a></li>
+                                <li><a href="${pageContext.request.contextPath}/mainmenu/getMainMenu.do">我的主页</a></li>
                                 <li><a href="#">关于我们</a></li>
                                 <li><a href="#">快速联系</a></li>
                             </ul>

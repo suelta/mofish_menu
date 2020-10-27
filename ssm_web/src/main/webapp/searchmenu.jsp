@@ -341,7 +341,7 @@
                 <div class="col-12">
                     <!-- breadcrumb-list start -->
                     <ul class="breadcrumb-list">
-                        <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                        <li class="breadcrumb-item"><a href="${pageContext.request.contextPath}/mainmenu/getMainMenu.do">主页</a></li>
                         <li class="breadcrumb-item active">${whichtag}</li>
                     </ul>
                     <!-- breadcrumb-list end -->
@@ -377,7 +377,7 @@
                                     <!-- product-view-mode end -->
                                     <!-- product-short start -->
                                     <div class="product-short">
-                                        <p>Sort By :</p>
+                                        <p>排序方式:</p>
                                         <select class="nice-select" name="sortby">
                                             <option value="trending">相关性</option>
                                             <option value="sales">名称顺序</option>
@@ -478,13 +478,13 @@
                                     <div class="col-lg-12 col-md-12">
                                         <ul class="pagination-box">
                                             <%--<li><a aria-label="Previous" href="${pageContext.request.contextPath}/search/searchMenu.do?mname=${searchString}&page=1&size=8" >Fist</a></li>--%>
-                                            <li><a aria-label="Previous" onclick="first()">Fist</a></li>
-                                            <li><a aria-label="Previous" onclick="previous()">Previous</a></li>
+                                            <li><a aria-label="Previous" onclick="first()">第一页</a></li>
+                                            <li><a aria-label="Previous" onclick="previous()">上一页</a></li>
                                             <c:forEach begin="1" end="${menuInfoPage.pages}" var="pagenum">
                                                 <li><a onclick="middle(${pagenum})">${pagenum}</a></li>
                                             </c:forEach>
-                                            <li><a class="Next" onclick="next()">Next</a></li>
-                                            <li><a class="last-elem" onclick="last()" aria-label="Last">Last</a></li>
+                                            <li><a class="Next" onclick="next()">下一页</a></li>
+                                            <li><a class="last-elem" onclick="last()" aria-label="Last">最后一页</a></li>
                                                 <li><a>第${menuInfoPage.pageNum}页</a> </li>
                                         </ul>
                                     </div>

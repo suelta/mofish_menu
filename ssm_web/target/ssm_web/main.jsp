@@ -144,7 +144,7 @@
             height: 330px;
         }
         .daymenushow{
-            width: 330px;
+            width: 300px;
             height: 330px;
             display: block;
         }
