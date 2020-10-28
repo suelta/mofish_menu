@@ -411,8 +411,16 @@
                                                                     <img class="hotmenushow" src="/assets/data/${menuInfoPage.list.get(num).mid}/main.jpg" alt=""></a>
                                                                     <%--<span class="onsale">Sale!</span>--%>
                                                             </div>
+                                                            <%--<div class="product-button">--%>
+                                                                <%--<a href="#" class="add-to-wishlist">点赞数${menuLikePage.list.get(num).mlcount}<i class="icon-heart"></i></a>--%>
+                                                            <%--</div>--%>
+
                                                             <div class="product-button">
-                                                                <a href="#" class="add-to-wishlist">点赞数${menuLikePage.list.get(num).mlcount}<i class="icon-heart"></i></a>
+                                                                <a  class="add-to-wishlist">
+                                                                    <div style="background:#eef0f1; color:#808080;height: 25px;width: 50px;border-radius:5px">
+                                                                        <i class="icon-heart">${menuLikePage.list.get(num).mlcount}</i>
+                                                                    </div>
+                                                                </a>
                                                             </div>
                                                             <div class="product-content">
                                                                 <h6 class="product-name">${menuInfoPage.list.get(num).mname}</h6>
@@ -543,7 +551,7 @@
                     <div class="col-lg-1"></div>
                     <div class="col-lg-6 col-md-6">
                         <div class="copy-left-text">
-                            <p>Copyright &copy; MoFish 2019. All Right Reserved.</p>
+                            <p>Copyright &copy; MoFish 2020. All Right Reserved.</p>
                         </div>
                     </div>
                 </div>

@@ -659,7 +659,7 @@
                     <div class="col-lg-1"></div>
                     <div class="col-lg-6 col-md-6">
                         <div class="copy-left-text">
-                            <p>Copyright &copy; MoFish 2019. All Right Reserved.</p>
+                            <p>Copyright &copy; MoFish 2020. All Right Reserved.</p>
                         </div>
                     </div>
                 </div>

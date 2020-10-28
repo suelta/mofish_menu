@@ -356,25 +356,23 @@
                                     <li>
                                         <div class="contact-title">
                                             <i class="fa fa-home"></i>
-                                            <h4>Address</h4>
+                                            <h4>地址</h4>
                                         </div>
-                                        <p>123 Main Street, Anytown, CA 12345 – USA</p>
+                                        <p>中国，湖北省，武汉市，武汉理工大学（余家头）</p>
                                     </li>
                                     <li>
                                         <div class="contact-title">
                                             <i class="fa fa-envelope-open-o"></i>
-                                            <h4>Phone</h4>
+                                            <h4>联系电话</h4>
                                         </div>
-                                        <p>Mobile: (08) 123 456 789<br>
-                                            Hotline: 1009 678 456</p>
+                                        <p>电话号码: (86) 123 456 789<br></p>
                                     </li>
                                     <li>
                                         <div class="contact-title">
                                             <i class="fa fa-phone"></i>
-                                            <h4>Email</h4>
+                                            <h4>邮箱</h4>
                                         </div>
-                                        <p>yourmail@domain.com<br>
-                                            support@roadthemes.com</p>
+                                        <p>mofish@163.com<br></p>
                                     </li>
                                 </ul>
                             </div>
@@ -476,7 +474,7 @@
                     <div class="col-lg-1"></div>
                     <div class="col-lg-6 col-md-6">
                         <div class="copy-left-text">
-                            <p>Copyright &copy; MoFish 2019. All Right Reserved.</p>
+                            <p>Copyright &copy; MoFish 2020. All Right Reserved.</p>
                         </div>
                     </div>
                 </div>

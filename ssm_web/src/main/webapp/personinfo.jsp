@@ -55,10 +55,10 @@
 
     <style>
         .myinfoshow{
-            background-color: #ff9240;
+            background-color: #D6EEBE;
         }
         .myinfo{
-            margin-top: 50px;
+            margin-top: 1px;
         }
         .user_nav ul{}
         .user_nav ul li{display:inline-block;vertical-align:top;*display:inline;*zoom:1;height:50px;line-height:50px;font-size:14px;color:#333;}
@@ -70,7 +70,7 @@
         .user_nav ul li.create_cp a:hover{background:#ff3232;color:#fff;}
         .clearfix:after{content:"";display:block;height:0;clear:both;}
         .user_main_index{height:600px;background:#fafafa;}
-        .havepadding{padding: 20px}
+        .havepadding{padding: 50px}
         /*.taskbox{
             min-height: 200px;
         }*/
@@ -79,9 +79,21 @@
             text-align: center;
         }
         .hotmenushow{
-            width: 330px;
-            height: 330px;
+            width: 230px; <%--330--%>
+            height: 230px;
             display: block;
+        }
+        .btn-createmenu{
+            color: #FFFFFF;
+            background-color: #a0e813;
+            border-color: #a0e813;
+        }
+        .bottomdiv{
+            padding-top: 160px;
+            padding-left: 40px;
+        }
+        .text-center{
+            padding: 20px;
         }
     </style>
 </head>
@@ -363,7 +375,7 @@
                 <div class="col-12">
                     <!-- breadcrumb-list start -->
                     <ul class="breadcrumb-list">
-                        <li class="breadcrumb-item"><a href="${pageContext.request.contextPath}/skip/tomain.do">我的主页</a></li>
+                        <li class="breadcrumb-item"><a href="${pageContext.request.contextPath}/mainmenu/getMainMenu.do">主页</a></li>
                         <li class="breadcrumb-item active">个人信息</li>
                     </ul>
                     <!-- breadcrumb-list end -->
@@ -376,95 +388,193 @@
     <h3 class="text-center">欢迎来到我的美食空间</h3>
     <%-- 事件：个人信息 --%>
     <div class="container myinfoshow">
-        <div class="row havepadding">
-            <%if(((UserInfo)request.getAttribute("userinfo")).getUgender().equals("男")){%>
-            <div class="col-lg-4">
-                <div class="avatar_w"><a href="#"><img src="${pageContext.request.contextPath}/assets/images/personphoto/photomale-300.png"></a></div>
-            </div>
-            <%}else{%>
-            <div class="col-lg-4">
-                <div class="avatar_w"><a href="#"><img src="${pageContext.request.contextPath}/assets/images/personphoto/photofemale-300.png"></a></div>
-            </div>
-            <% }%>
-
-            <div class="col-lg-4 userh_main">
-                <div class="myinfo">
-                    <span class="info"><h4>${userinfo.uname}</h4>
-                    <h5>账号：${userinfo.uid}</h5>
-
-                    <h5>性别：<%= ((UserInfo)request.getAttribute("userinfo")).getUgender()%></h5>
-
-                    <h5><% Date date =((UserInfo)request.getAttribute("userinfo")).getUrgtime();%>
-                            <% DateFormat format1 = new SimpleDateFormat("yyyy-MM-dd");  %>
-                            <%=  format1.format(date)%>加入中华小当家</h5>
-                    <h5>收到的点赞<i class="icon-heart"></i>：${userlike.ulcount}</h5><br>
-
-                    <a href="${pageContext.request.contextPath}/user/toUpdataUser.do"><strong>编辑个人资料</strong></a></span>
-                </div>	</div>
-        </div>
-
-        <div class="login-register-tab-list nav">
-            <div class="user_nav">
-                <ul>
-                    <ul>
-                        <li class="current"><a data-toggle="tab" href="${pageContext.request.contextPath}/user/homepage.do">我的食谱</a></li>
-                        <li><a href="${pageContext.request.contextPath}/user/homepagecollect.do">我的收藏</a></li>
-                    </ul>
-                </ul>
-            </div>
-        </div>
-        <div class="col-lg-12">
-            <div class="alignmiddle">
-                <a  href="${pageContext.request.contextPath}/skip/touploadmenu.do">
-                    <div class="欢迎-box">
-                        <button class="btn-warning btn" type="button" onclick="userRegister()"><span>制作我的菜谱</span></button>
+        <div style="overflow:auto;zoom: 1">
+            <div style="width: 350px;float: left">
+                <%--这里是主体结构，需要将这边的信息往左靠--%>
+                <div class="row havepadding">
+                    <%--头像--%>
+                    <%if(((UserInfo)request.getAttribute("userinfo")).getUgender().equals("男")){%>
+                    <div>
+                        <div class="avatar_w"><a href="#"><img width="200" height="200" src="${pageContext.request.contextPath}/assets/images/personphoto/photomale-300.png"></a></div>
                     </div>
-                </a>
-            </div>
-            <div class="product-area section-pt-30">
-                <div class="container">
-                    <div class="row row-8 product-two-row-4">
-                        <%-- 事件：菜谱显示 --%>
-                        <c:forEach begin="0" end="${menuInfoList.size()-1}" var="num">
-                            <div class="product-col">
-                                <!-- Single Product Start -->
-                                <div class="single-product-wrap mt-10">
-                                        <%-- 菜谱展示 --%>
-                                    <div class="product-image">
-                                        <a href="${pageContext.request.contextPath}/querymenu/getdetailmenuinfo.do?uid=${userinfo.uid}&mid=${menuInfoList.get(num).mid}">
-                                            <img class="hotmenushow" src="/assets/data/${menuInfoList.get(num).mid}/main.jpg" alt=""></a>
-                                            <%--<span class="onsale">Sale!</span>--%>
-                                    </div>
-                                    <div class="product-button">
-                                        <a href="#" class="add-to-wishlist">点赞数${menuLikeList.get(num).mlcount}<i class="icon-heart"></i></a>
-                                    </div>
-                                    <div class="product-content">
-                                        <h6 class="product-name">${menuInfoList.get(num).mname}</h6>
-                                        <h6 class="product-name">${userinfo.uname}</h6>
+                    <%}else{%>
+                    <div>
+                        <div class="avatar_w"><a href="#"><img width="200" height="200" src="${pageContext.request.contextPath}/assets/images/personphoto/photofemale-300.png"></a></div>
+                    </div>
+                    <% }%>
+                </div>
+                <%--基本信息--%>
+                <div class="myinfo">
+                    <span class="info">
+                        <p>昵称：${userinfo.uname}</p>
+                        <%--<p>账号：${userinfo.uid}</p>--%>
+                        <p>性别：<%= ((UserInfo)request.getAttribute("userinfo")).getUgender()%></p>
+                        <p><% Date date =((UserInfo)request.getAttribute("userinfo")).getUrgtime();%>
+                            <% DateFormat format1 = new SimpleDateFormat("yyyy-MM-dd");  %>
+                            <%=  format1.format(date)%>加入中华小当家</p>
+                        <p>收到的点赞<i class="icon-heart"></i>：${userlike.ulcount}</p>
+                        <a href="${pageContext.request.contextPath}/user/toUpdataUser.do">
+                            <strong>编辑个人资料</strong>
+                        </a><br>
 
-                                        <div class="product-button-action">
-                                            <a href="${pageContext.request.contextPath}/querymenu/getdetailmenuinfo.do?uid=${userinfo.uid}&mid=${menuInfoList.get(num).mid}" class="add-to-cart">点我查看做法</a>
+                    </span>
+                </div>
+                    <div class="bottomdiv">
+                    <a  href="${pageContext.request.contextPath}/skip/touploadmenu.do">
+                        <div class="欢迎-box">
+                            <button class="btn-createmenu btn" type="button" onclick="userRegister()"><span>制作我的菜谱</span></button>
+                        </div>
+                    </a>
+                    </div>
+            </div>
+
+            <div style="width: 820px;float: right;">
+                <%--切换菜单--%>
+                <div class="login-register-tab-list nav" >
+                    <div class="user_nav">
+                        <ul>
+                            <ul>
+                                <li class="current"><a data-toggle="tab" href="${pageContext.request.contextPath}/user/homepage.do">我的食谱</a></li>
+                                <li><a href="${pageContext.request.contextPath}/user/homepagecollect.do">我的收藏</a></li>
+                            </ul>
+                        </ul>
+                    </div>
+                </div>
+
+                <%--菜单显示--%>
+                <div class="product-area section-pt-30" style="height: 600px;overflow: auto">
+                    <div class="container">
+                        <div class="row row-8 product-two-row-4">
+                            <%-- 事件：菜谱显示 --%>
+                            <c:forEach begin="0" end="${menuInfoList.size()-1}" var="num">
+                                <div class="product-col">
+                                    <!-- Single Product Start -->
+                                    <div class="single-product-wrap mt-10">
+                                            <%-- 菜谱展示 --%>
+                                        <div class="product-image">
+                                            <a href="${pageContext.request.contextPath}/querymenu/getdetailmenuinfo.do?uid=${userinfo.uid}&mid=${menuInfoList.get(num).mid}">
+                                                <img class="hotmenushow" src="/assets/data/${menuInfoList.get(num).mid}/main.jpg" alt=""></a>
+                                                <%--<span class="onsale">Sale!</span>--%>
+                                        </div>
+                                        <div class="product-button">
+                                            <a  class="add-to-wishlist">
+                                                <div style="background:#eef0f1; color:#808080;height: 25px;width: 50px;border-radius:5px">
+                                                    <i class="icon-heart">${menuLikeList.get(num).mlcount}</i>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div class="product-content">
+                                            <h6 class="product-name">${menuInfoList.get(num).mname}</h6>
+                                            <h6 class="product-name">${userinfo.uname}</h6>
+
+                                            <div class="product-button-action">
+                                                <a href="${pageContext.request.contextPath}/querymenu/getdetailmenuinfo.do?uid=${userinfo.uid}&mid=${menuInfoList.get(num).mid}" class="add-to-cart">点我查看做法</a>
+                                            </div>
                                         </div>
                                     </div>
+                                    <!-- Single Product End -->
                                 </div>
-                                <!-- Single Product End -->
-                            </div>
-                        </c:forEach>
+                            </c:forEach>
+                        </div>
                     </div>
                 </div>
             </div>
-            <%-- <div id="mycollect" class="tab-pane ">
-                 <p>mycollect</p>
-             </div>
-             <div id="task" class="tab-pane ">
-                 <p>task</p>
-             </div>
-             <div id="collect" class="tab-pane ">
-                 <p>collect</p>
-             </div>--%>
         </div>
-
+        <%--留空--%>
+        <div style="height: 50px"></div>
     </div>
+    <%--留空--%>
+    <div style="height: 50px"></div>
+    <%--<div class="container myinfoshow">--%>
+        <%--<div class="row havepadding">--%>
+            <%--<%if(((UserInfo)request.getAttribute("userinfo")).getUgender().equals("男")){%>--%>
+            <%--<div class="col-lg-4">--%>
+                <%--<div class="avatar_w"><a href="#"><img src="${pageContext.request.contextPath}/assets/images/personphoto/photomale-300.png"></a></div>--%>
+            <%--</div>--%>
+            <%--<%}else{%>--%>
+            <%--<div class="col-lg-4">--%>
+                <%--<div class="avatar_w"><a href="#"><img src="${pageContext.request.contextPath}/assets/images/personphoto/photofemale-300.png"></a></div>--%>
+            <%--</div>--%>
+            <%--<% }%>--%>
+
+            <%--<div class="col-lg-4 userh_main">--%>
+                <%--<div class="myinfo">--%>
+                    <%--<span class="info"><h4>${userinfo.uname}</h4>--%>
+                    <%--<h5>账号：${userinfo.uid}</h5>--%>
+
+                    <%--<h5>性别：<%= ((UserInfo)request.getAttribute("userinfo")).getUgender()%></h5>--%>
+
+                    <%--<h5><% Date date =((UserInfo)request.getAttribute("userinfo")).getUrgtime();%>--%>
+                            <%--<% DateFormat format1 = new SimpleDateFormat("yyyy-MM-dd");  %>--%>
+                            <%--<%=  format1.format(date)%>加入中华小当家</h5>--%>
+                    <%--<h5>收到的点赞<i class="icon-heart"></i>：${userlike.ulcount}</h5><br>--%>
+
+                    <%--<a href="${pageContext.request.contextPath}/user/toUpdataUser.do"><strong>编辑个人资料</strong></a></span>--%>
+                <%--</div>	</div>--%>
+        <%--</div>--%>
+
+        <%--<div class="login-register-tab-list nav">--%>
+            <%--<div class="user_nav">--%>
+                <%--<ul>--%>
+                    <%--<ul>--%>
+                        <%--<li class="current"><a data-toggle="tab" href="${pageContext.request.contextPath}/user/homepage.do">我的食谱</a></li>--%>
+                        <%--<li><a href="${pageContext.request.contextPath}/user/homepagecollect.do">我的收藏</a></li>--%>
+                    <%--</ul>--%>
+                <%--</ul>--%>
+            <%--</div>--%>
+        <%--</div>--%>
+        <%--<div class="col-lg-12">--%>
+            <%--<div class="alignmiddle">--%>
+                <%--<a  href="${pageContext.request.contextPath}/skip/touploadmenu.do">--%>
+                    <%--<div class="欢迎-box">--%>
+                        <%--<button class="btn-warning btn" type="button" onclick="userRegister()"><span>制作我的菜谱</span></button>--%>
+                    <%--</div>--%>
+                <%--</a>--%>
+            <%--</div>--%>
+            <%--<div class="product-area section-pt-30">--%>
+                <%--<div class="container">--%>
+                    <%--<div class="row row-8 product-two-row-4">--%>
+                        <%--&lt;%&ndash; 事件：菜谱显示 &ndash;%&gt;--%>
+                        <%--<c:forEach begin="0" end="${menuInfoList.size()-1}" var="num">--%>
+                            <%--<div class="product-col">--%>
+                                <%--<!-- Single Product Start -->--%>
+                                <%--<div class="single-product-wrap mt-10">--%>
+                                        <%--&lt;%&ndash; 菜谱展示 &ndash;%&gt;--%>
+                                    <%--<div class="product-image">--%>
+                                        <%--<a href="${pageContext.request.contextPath}/querymenu/getdetailmenuinfo.do?uid=${userinfo.uid}&mid=${menuInfoList.get(num).mid}">--%>
+                                            <%--<img class="hotmenushow" src="/assets/data/${menuInfoList.get(num).mid}/main.jpg" alt=""></a>--%>
+                                            <%--&lt;%&ndash;<span class="onsale">Sale!</span>&ndash;%&gt;--%>
+                                    <%--</div>--%>
+                                    <%--<div class="product-button">--%>
+                                        <%--<a href="#" class="add-to-wishlist">点赞数${menuLikeList.get(num).mlcount}<i class="icon-heart"></i></a>--%>
+                                    <%--</div>--%>
+                                    <%--<div class="product-content">--%>
+                                        <%--<h6 class="product-name">${menuInfoList.get(num).mname}</h6>--%>
+                                        <%--<h6 class="product-name">${userinfo.uname}</h6>--%>
+
+                                        <%--<div class="product-button-action">--%>
+                                            <%--<a href="${pageContext.request.contextPath}/querymenu/getdetailmenuinfo.do?uid=${userinfo.uid}&mid=${menuInfoList.get(num).mid}" class="add-to-cart">点我查看做法</a>--%>
+                                        <%--</div>--%>
+                                    <%--</div>--%>
+                                <%--</div>--%>
+                                <%--<!-- Single Product End -->--%>
+                            <%--</div>--%>
+                        <%--</c:forEach>--%>
+                    <%--</div>--%>
+                <%--</div>--%>
+            <%--</div>--%>
+            <%--&lt;%&ndash; <div id="mycollect" class="tab-pane ">--%>
+                 <%--<p>mycollect</p>--%>
+             <%--</div>--%>
+             <%--<div id="task" class="tab-pane ">--%>
+                 <%--<p>task</p>--%>
+             <%--</div>--%>
+             <%--<div id="collect" class="tab-pane ">--%>
+                 <%--<p>collect</p>--%>
+             <%--</div>&ndash;%&gt;--%>
+        <%--</div>--%>
+
+    <%--</div>--%>
 
 
 
@@ -524,7 +634,7 @@
                     <div class="col-lg-1"></div>
                     <div class="col-lg-6 col-md-6">
                         <div class="copy-left-text">
-                            <p>Copyright &copy; MoFish 2019. All Right Reserved.</p>
+                            <p>Copyright &copy; MoFish 2020. All Right Reserved.</p>
                         </div>
                     </div>
                 </div>

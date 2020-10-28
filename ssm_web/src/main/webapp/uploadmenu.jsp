@@ -676,7 +676,7 @@
                 <div class="row align-items-center">
                     <div class="col-lg-6 col-md-6">
                         <div class="copy-left-text">
-                            <p>Copyright &copy; <a href="http://www.bootstrapmb.com/">Origine</a> 2019. All Right Reserved.</p>
+                            <p>Copyright &copy; <a href="http://www.bootstrapmb.com/">Origine</a> 2020. All Right Reserved.</p>
                         </div>
                     </div>
                     <div class="col-lg-6 col-md-6">

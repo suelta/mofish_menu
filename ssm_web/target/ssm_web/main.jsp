@@ -558,12 +558,19 @@
                                 <img class="hotmenushow" src="/assets/data/${popMenuInfoList.get(num).mid}/main.jpg" alt=""></a>
                             <%--<span class="onsale">Sale!</span>--%>
                         </div>
-                        <div class="product-button">
-                            <a href="#" class="add-to-wishlist">点赞数${popMenuLikeList.get(num).mlcount}
-                                <div >
-                                    <i onclick="heartchang()" name="iconheart" class="icon-heart"></i>
-                                </div></a>
-                        </div>
+                        <%--<div class="product-button">--%>
+                            <%--<a href="#" class="add-to-wishlist">点赞数${popMenuLikeList.get(num).mlcount}--%>
+                                <%--<div >--%>
+                                    <%--<i onclick="heartchang()" name="iconheart" class="icon-heart"></i>--%>
+                                <%--</div></a>--%>
+                        <%--</div>--%>
+                            <div class="product-button">
+                                <a  class="add-to-wishlist">
+                                    <div style="background:#eef0f1; color:#808080;height: 25px;width: 50px;border-radius:5px">
+                                        <i onclick="heartchang()" name="iconheart" class="icon-heart">${popMenuLikeList.get(num).mlcount}</i>
+                                    </div>
+                                </a>
+                            </div>
                         <div class="product-content">
                             <h6 class="product-name">${popMenuInfoList.get(num).mname}</h6>
                             <h6 class="product-name">${popUserInfoList.get(num).uname}</h6>
@@ -606,8 +613,16 @@
                                     <%--<div class="countdown-deals" data-countdown="2020/03/01"></div>--%>
                                     <!-- countdown end -->
                                 </div>
+                                <%--<div class="product-button">--%>
+                                    <%--<a href="#" class="add-to-wishlist">点赞数${dayMenuLikeList.get(num2).mlcount}<i class="icon-heart"></i></a>--%>
+                                <%--</div>--%>
+
                                 <div class="product-button">
-                                    <a href="#" class="add-to-wishlist">点赞数${dayMenuLikeList.get(num2).mlcount}<i class="icon-heart"></i></a>
+                                    <a  class="add-to-wishlist">
+                                        <div  style="background:#eef0f1; color:#808080;height: 25px;width: 50px;border-radius:5px">
+                                            <i onclick="heartchang()" class="icon-heart">${dayMenuLikeList.get(num2).mlcount}</i>
+                                        </div>
+                                    </a>
                                 </div>
                                 <div class="product-content">
                                     <h6 class="product-name">${dayMenuInfoList.get(num2).mname}</h6>
@@ -671,7 +686,7 @@
                     <div class="col-lg-1"></div>
                     <div class="col-lg-6 col-md-6">
                         <div class="copy-left-text">
-                            <p>Copyright &copy; MoFish 2019. All Right Reserved.</p>
+                            <p>Copyright &copy; MoFish 2020. All Right Reserved.</p>
                         </div>
                     </div>
                 </div>
@@ -823,15 +838,16 @@
 
 
     function heartchang(event) {
-        alert("hhhhh");
-        // event.style.backgroundColor="#F000";
-
-        // alert(event.id);
-        var allstar = document.getElementsByName("iconheart");
-        alert(allstar.length);
-        for(var i = 0; i< allstar.length;i++){
-            allstar.item(i).style.backgroundColor = "#F00";
-        }
+        alert("暂时不提供该界面点赞功能")
+        // alert("hhhhh");
+        // // event.style.backgroundColor="#F000";
+        //
+        // // alert(event.id);
+        // var allstar = document.getElementsByName("iconheart");
+        // alert(allstar.length);
+        // for(var i = 0; i< allstar.length;i++){
+        //     allstar.item(i).style.backgroundColor = "#F00";
+        // }
     }
 </script>
 </body>
