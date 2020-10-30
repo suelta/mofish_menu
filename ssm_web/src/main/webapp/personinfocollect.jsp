@@ -2,7 +2,8 @@
 <%@ page import="com.mofish.bean.UserInfo" %>
 <%@ page import="java.text.DateFormat" %>
 <%@ page import="java.text.SimpleDateFormat" %>
-<%@ page import="java.util.Calendar" %><%--
+<%@ page import="java.util.Calendar" %>
+<%@ page import="java.util.List" %><%--
   Created by IntelliJ IDEA.
   User: Administrator
   Date: 2019/7/4
@@ -421,6 +422,11 @@
                     <div class="container">
                         <div class="row row-8 product-two-row-4">
                             <%-- 事件：菜谱显示 --%>
+                            <% if (((List)request.getAttribute("menuInfoList")).size() == 0){%>
+                            <div>
+                                <h3 class="text-center">暂时还没有收藏食谱哟！快去收藏吧！ </h3>
+                            </div>
+                            <%}else{%>
                             <c:forEach begin="0" end="${menuInfoList.size()-1}" var="num">
                                 <div class="product-col">
                                     <!-- Single Product Start -->
@@ -451,6 +457,7 @@
                                     <!-- Single Product End -->
                                 </div>
                             </c:forEach>
+                            <%}%>
                         </div>
                     </div>
                 </div>

@@ -399,7 +399,7 @@
                                                 <label>出生年月</label><input type="date" name="birth" placeholder="date of birth">
                                                 <%--</div>--%>
                                                 <div class="button-box">
-                                                    <button class="register-btn btn" type="button" onclick="userRegister()"><span>Register</span></button>
+                                                    <button class="register-btn btn" type="button" onclick="userRegister()"><span>注册</span></button>
                                                 </div>
                                         </form>
                                     </div>
