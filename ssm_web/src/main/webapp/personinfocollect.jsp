@@ -56,7 +56,7 @@
 
     <style>
         .myinfoshow{
-            background-color: #D6EEBE;
+            background-color: #f3f3f3;
         }
         .myinfo{
             margin-top: 1px;
@@ -204,7 +204,7 @@
                                 <%-- 事件：搜索 --%>
                                 <form class="search-box-inner" action="${pageContext.request.contextPath}/search/searchMenu.do?page=1&size=8" method="post">
                                     <div class="search-field-wrap">
-                                        <input type="text" name="mname" class="search-field" placeholder="请输入菜谱">
+                                        <input type="text" name="mname" class="search-field" placeholder="请输入食谱">
 
                                         <div class="search-btn">
                                             <button type="submit"><i class="icon-search"></i></button>

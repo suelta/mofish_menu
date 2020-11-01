@@ -56,7 +56,7 @@
 
     <style>
         .myinfoshow{
-            background-color: #D6EEBE;
+            background-color: #f3f3f3;
         }
         .myinfo{
             margin-top: 1px;
@@ -213,7 +213,7 @@
                                 <%-- 事件：搜索 --%>
                                 <form class="search-box-inner" action="${pageContext.request.contextPath}/search/searchMenu.do?page=1&size=8" method="post">
                                     <div class="search-field-wrap">
-                                        <input type="text" name="mname" class="search-field" placeholder="请输入菜谱">
+                                        <input type="text" name="mname" class="search-field" placeholder="请输入食谱">
 
                                         <div class="search-btn">
                                             <button type="submit"><i class="icon-search"></i></button>
@@ -423,7 +423,7 @@
                     <div class="bottomdiv">
                     <a  href="${pageContext.request.contextPath}/skip/touploadmenu.do">
                         <div class="欢迎-box">
-                            <button class="btn-createmenu btn" type="button" onclick="userRegister()"><span>制作我的菜谱</span></button>
+                            <button class="btn-createmenu btn" type="button" onclick="userRegister()"><span>制作我的食谱</span></button>
                         </div>
                     </a>
                     </div>

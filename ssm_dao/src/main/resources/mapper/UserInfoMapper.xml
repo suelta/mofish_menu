@@ -24,5 +24,4 @@
         set uname=#{uname},upwd=#{upwd},ugender=#{ugender},utel=#{utel},ubirth=#{ubirth}
         where uid=#{uid}
     </update>
-
 </mapper>

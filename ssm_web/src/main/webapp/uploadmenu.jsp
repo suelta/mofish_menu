@@ -206,7 +206,7 @@
                                 <%-- 事件：搜索 --%>
                                 <form class="search-box-inner" action="${pageContext.request.contextPath}/search/searchMenu.do?page=1&size=8" method="post">
                                     <div class="search-field-wrap">
-                                        <input type="text" name="mname" class="search-field" placeholder="请输入菜谱">
+                                        <input type="text" name="mname" class="search-field" placeholder="请输入食谱">
 
                                         <div class="search-btn">
                                             <button type="submit"><i class="icon-search"></i></button>
@@ -370,7 +370,7 @@
                     <!-- breadcrumb-list start -->
                     <ul class="breadcrumb-list">
                         <li class="breadcrumb-item"><a href="${pageContext.request.contextPath}/mainmenu/getMainMenu.do">我的主页</a></li>
-                        <li class="breadcrumb-item active">上传菜谱</li>
+                        <li class="breadcrumb-item active">上传食谱</li>
                     </ul>
                     <!-- breadcrumb-list end -->
                 </div>
@@ -381,7 +381,7 @@
 
 
     <form id="test_form" action="${pageContext.request.contextPath}/uploadtool/addReport.do" method="post" enctype="multipart/form-data">
-        <h3 class="bbtitles">欢迎发布新菜谱，先介绍一下你的大作！</h3>
+        <h3 class="bbtitles">欢迎发布新食谱，先介绍一下你的大作！</h3>
         <div class="container menudesc">
             <div >
 
@@ -395,16 +395,16 @@
                 <div class="col-lg-6">
                     <div class="uploadbox">
                         <div class="uploaditem">
-                            <h4>菜谱名称</h4>
+                            <h4>食谱名称</h4>
                             <div class="row1_box">
                                 <div class="input_text_item">
                                     <input type="text" class="form-control" title="title" value="" name="mname1" placeholder="请填写菜谱名称，10字以内" >
-                                    <div class="upload_tips" style="bottom:54px;left:0px;">1、菜谱名称中不加特殊符号如：“，。【】”<span class="upload_tips_arrow"></span></div>
+                                    <div class="upload_tips" style="bottom:54px;left:0px;">1、食谱名称中不加特殊符号如：“，。【】”<span class="upload_tips_arrow"></span></div>
                                 </div>
                             </div>
                         </div>
                         <div class="uploadbox">
-                            <h4>菜谱标签</h4>
+                            <h4>食谱标签</h4>
                             <div class="fontsizemid">
                                 <label class="checkbox-inline">
                                     <input type="checkbox" name="menutags" id="inlineCheckbox1" value="1"> 川 菜
@@ -457,25 +457,25 @@
                             </div>
                         </div>
                         <div class="uploaditem">
-                            <h4>菜谱主食材：</h4>
+                            <h4>食谱主食材：</h4>
                             <div class="input_text_item">
-                                <textarea name="mdingredients" placeholder="请填写菜谱主食材，不超过200字" rows="2" class="form-control"></textarea>
+                                <textarea name="mdingredients" placeholder="请填写食谱主食材，不超过200字" rows="2" class="form-control"></textarea>
                             </div>
                         </div>
                         <div class="uploaditem">
-                            <h4>菜谱辅食材：</h4>
+                            <h4>食谱辅食材：</h4>
                             <div class="input_text_item">
-                                <textarea name="mdexcipient" placeholder="请填写菜谱辅食材，不超过200字" rows="2" class="form-control"></textarea>
+                                <textarea name="mdexcipient" placeholder="请填写食谱辅食材，不超过200字" rows="2" class="form-control"></textarea>
                             </div>
                         </div>
                         <div class="uploaditem">
-                            <h4>菜谱描述：</h4>
+                            <h4>食谱描述：</h4>
                             <div class="input_text_item">
-                                <textarea name="mddesc" placeholder="请填写菜谱描述，不超过200字" rows="2" class="form-control"></textarea>
+                                <textarea name="mddesc" placeholder="请填写食谱描述，不超过200字" rows="2" class="form-control"></textarea>
                             </div>
                         </div>
                         <div class="uploaditem">
-                            <h4>上传你菜谱的成品图: </h4>
+                            <h4>上传你食谱的成品图: </h4>
                             <div class="latest-blog-image">
                                 <img class="cpphoto" id="cropedBigImg0" src="/assets/images/tools/upload-540.png" alt="">
                                 <div class="post-category-tag">
@@ -555,7 +555,7 @@
         </div>
         <div class="alignmiddle">
             <div class="button-box">
-                <button class="login-btn btn" type="button"  id="sumbmitmenuinfo"><span>上传菜谱</span></button>
+                <button class="login-btn btn" type="button"  id="sumbmitmenuinfo"><span>上传食谱</span></button>
             </div>
         </div>
     </form>
@@ -788,7 +788,7 @@
                 dataType:"json",
                 success:function(data){
                     if(data.flag=="ok"){
-                        alert("菜谱上传成功！");
+                        alert("食谱上传成功！");
                         var form = document.getElementById('test_form');
                         form.submit();
                     }

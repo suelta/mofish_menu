@@ -265,7 +265,7 @@
                                 <%-- 事件：搜索 --%>
                                 <form class="search-box-inner" action="${pageContext.request.contextPath}/search/searchMenu.do?page=1&size=8" method="post">
                                     <div class="search-field-wrap">
-                                        <input type="text" name="mname" class="search-field" placeholder="请输入菜谱">
+                                        <input type="text" name="mname" class="search-field" placeholder="请输入食谱">
 
                                         <div class="search-btn">
                                             <button type="submit"><i class="icon-search"></i></button>
@@ -533,14 +533,14 @@
                 <div class="col-lg-6 col-md-6">
                     <!-- Section Title Start -->
                     <div class="section-title">
-                        <h3>最热菜谱</h3>
+                        <h3>最热食谱</h3>
                     </div>
                     <!-- Section Title End -->
                 </div>
                 <div class="col-lg-6 col-md-6">
                     <!-- Section Title Start -->
                     <div class="view-all-product text-right">
-                        <a href="${pageContext.request.contextPath}/search/searchMenu.do?page=1&size=8">显示所有的菜谱 <i class="icon-chevrons-right"></i></a>
+                        <a href="${pageContext.request.contextPath}/search/searchMenu.do?page=1&size=8">显示所有的食谱 <i class="icon-chevrons-right"></i></a>
                     </div>
                     <!-- Section Title End -->
                 </div>

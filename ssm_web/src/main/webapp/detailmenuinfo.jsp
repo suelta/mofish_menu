@@ -52,6 +52,46 @@
         .bigmarginbottom{
             margin-bottom: 20px;
         }
+        .menu-summary{
+            background: #f3f3f3;
+        }
+        .sku-name {
+            font: 700 16px Arial,"microsoft yahei";
+            line-height: normal;
+            color: #666;
+            padding-top: 10px;
+            line-height: 28px;
+            font-size: 24px;
+        }
+
+        .mt20 {
+            margin-top: 20px;
+        }
+        .p15 {
+            padding: 15px;
+        }
+
+        .clearfix {
+            zoom: 1;
+        }
+
+        .re-steps {
+            font-size: 16px;
+            line-height: 1.6em;
+        }
+        .re-steps .dl .dd {
+            float: left;
+            width: 490px;
+        }
+
+        .cg2 {
+            color: #a69f96;
+        }
+
+        .re-steps .dl .dt {
+            float: left;
+            width: 90px;
+        }
     </style>
 </head>
 
@@ -83,7 +123,7 @@
                                         </ul>--%>
                                     </li>
 
-                                    <li><a href="#">菜谱大全 <i class="fa fa-angle-down"></i></a>
+                                    <li><a href="#">食谱大全 <i class="fa fa-angle-down"></i></a>
                                         <ul class="mega-menu">
                                             <li><a href="#">八大菜系</a>
                                                 <ul>
@@ -169,7 +209,7 @@
                                 <%-- 事件：搜索 --%>
                                 <form class="search-box-inner" action="${pageContext.request.contextPath}/search/searchMenu.do?page=1&size=8" method="post">
                                     <div class="search-field-wrap">
-                                        <input type="text" name="mname" class="search-field" placeholder="请输入菜谱">
+                                        <input type="text" name="mname" class="search-field" placeholder="请输入食谱">
 
                                         <div class="search-btn">
                                             <button type="submit"><i class="icon-search"></i></button>
@@ -394,28 +434,58 @@
                     <!--// Product Details Left -->
                 </div>
 
-                <div class="col-lg-7 col-md-6">
+                <div class="col-lg-7 col-md-6 menu-summary">
                     <div class="product-details-view-content">
                         <div class="product-info">
                             <%-- 事件：菜谱主要信息 --%>
-                                <h3>${menuinfo.mname}<br>MID:${menuinfo.mid}</h3>
-                                <h4> UP：${userinfo.uname}&nbsp;&nbsp;&nbsp;&nbsp;UID:${userinfo.uid}</h4>
-                                <div>
-                                    <strong>主食材：</strong><p>${menudesc.mdingredients}</p>
+                            <div class="bpannel p15 re-steps">
+                                <div class="sku-name">${menuinfo.mname}</div>
+                                <div class="dl clearfix mt20">
+                                    <div class="dt cg2">食谱编号</div>
+                                    <div class="dd">${menuinfo.mid}</div>
                                 </div>
-                                <div>
-                                    <strong>辅食材：</strong><p>${menudesc.mdexcipient}</p>
+                                <div class="dl clearfix mt20">
+                                    <div class="dt cg2">食谱制作人</div>
+                                    <div class="dd">${userinfo.uname}</div>
                                 </div>
-                                <div>
-                                    <strong>菜谱简介</strong><p>${menudesc.mddesc}</p>
+                                <div class="dl clearfix mt20">
+                                    <div class="dt cg2">主食材</div>
+                                    <div class="dd">${menudesc.mdingredients}</div>
                                 </div>
-                                <div>
-                                    <strong>菜谱标签<br></strong>
-                                    <c:forEach begin="0" end="${tagList.size()-1}" var="num">
-                                        ${tagList.get(num).tcdisc}&emsp;
-                                    </c:forEach>
+                                <div class="dl clearfix mt20">
+                                    <div class="dt cg2">辅食材</div>
+                                    <div class="dd">${menudesc.mdexcipient}</div>
                                 </div>
-
+                                <div class="dl clearfix mt20">
+                                    <div class="dt cg2">食谱简介</div>
+                                    <div class="dd">${menudesc.mddesc}</div>
+                                </div>
+                                <div class="dl clearfix mt20">
+                                    <div class="dt cg2">食谱标签</div>
+                                    <div class="dd">
+                                        <c:forEach begin="0" end="${tagList.size()-1}" var="num">
+                                            ${tagList.get(num).tcdisc}&emsp;
+                                        </c:forEach>
+                                    </div>
+                                </div>
+                            </div>
+                                <%--<h3><br>食谱编号:${menuinfo.mid}</h3>--%>
+                                <%--<h4> 食谱制作人：${userinfo.uname}&nbsp;&nbsp;&nbsp;&nbsp;</h4>--%>
+                                <%--<div>--%>
+                                    <%--<strong>主食材：</strong><p>${menudesc.mdingredients}</p>--%>
+                                <%--</div>--%>
+                                <%--<div>--%>
+                                    <%--<strong>辅食材：</strong><p>${menudesc.mdexcipient}</p>--%>
+                                <%--</div>--%>
+                                <%--<div>--%>
+                                    <%--<strong>食谱简介</strong><p>${menudesc.mddesc}</p>--%>
+                                <%--</div>--%>
+                                <%--<div>--%>
+                                    <%--<strong>食谱标签<br></strong>--%>
+                                    <%--<c:forEach begin="0" end="${tagList.size()-1}" var="num">--%>
+                                        <%--${tagList.get(num).tcdisc}&emsp;--%>
+                                    <%--</c:forEach>--%>
+                                <%--</div>--%>
                             <%--<div class="product-rating d-flex">
                                 <ul class="d-flex">
                                     <li><a href="#"><i class="icon-star"></i></a></li>
@@ -443,7 +513,7 @@
                                     <button class="add-to-cart" type="submit">Add To Cart</button>
                                 </form>
                             </div>--%>
-                            <ul class="single-add-actions">
+                            <ul class="p15 ">
                                 <li class="add-to-wishlist">
                                     <button class="btn-success btn" onclick="addLike('${userinfo.uid}', '${menulike.mid}')"><i class="icon-heart"></i><span id="likecount">${menulike.mlcount}</span></button>
 

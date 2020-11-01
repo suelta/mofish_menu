@@ -176,7 +176,7 @@
                                 <%-- 事件：搜索 --%>
                                 <form class="search-box-inner" action="${pageContext.request.contextPath}/search/searchMenu.do?page=1&size=8" method="post">
                                     <div class="search-field-wrap">
-                                        <input type="text" name="mname" class="search-field" placeholder="请输入菜谱">
+                                        <input type="text" name="mname" class="search-field" placeholder="请输入食谱">
 
                                         <div class="search-btn">
                                             <button type="submit"><i class="icon-search"></i></button>
@@ -465,7 +465,7 @@
                                                             <a href="#" class="add-to-wishlist">点赞数${menuLikePage.list.get(num).mlcount}<i class="icon-heart"></i></a>
                                                         </div>
 
-                                                        <a class="detail-link quickview" href="${pageContext.request.contextPath}/querymenu/getdetailmenuinfo.do?uid=${userInfoPage.list.get(num).uid}&mid=${menuInfoPage.list.get(num).mid}"> <i class="icon-eye2"></i> 查看该菜谱</a>
+                                                        <a class="detail-link quickview" href="${pageContext.request.contextPath}/querymenu/getdetailmenuinfo.do?uid=${userInfoPage.list.get(num).uid}&mid=${menuInfoPage.list.get(num).mid}"> <i class="icon-eye2"></i> 查看该食谱</a>
                                                     </div>
                                                 </div>
                                             </div>
