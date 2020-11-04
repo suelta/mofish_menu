@@ -48,10 +48,13 @@ public class UpLoadToolController {
 //        String path=realPath;
 //        String path = request.getSession().getServletContext().getRealPath("\\src\\main\\webapp\\assets\\data\\test");
         // 循环读取文件信息
+        String path2 = str+"\\target\\ssm_web\\assets\\data\\"+mid+"\\";
+        System.out.println("===================================================="+path2);
         for (int i = 0; i < attachs.length; i++) {
             MultipartFile attach = attachs[i];
             if (!attach.isEmpty()) {// 判断文件是否为空
                 fileName = upload(path, attach,i);
+//                upload(path2, attach,i); //上传到target里面
             }
         }
 //        Integer count = reportService.addReport(report);

@@ -5,7 +5,8 @@
   Time: 22:05
   To change this template use File | Settings | File Templates.
 --%>
-<%@ page import="java.util.Calendar" %><%--
+<%@ page import="java.util.Calendar" %>
+<%@ page import="java.util.List" %><%--
   Created by IntelliJ IDEA.
   User: Administrator
   Date: 2019/7/4
@@ -401,7 +402,11 @@
                                         <div class="row row-8">
 
                                             <%-- 事件：单个菜谱信息--%>
-
+                                            <% if (((List)request.getAttribute("menuInfoList")).size() == 0){%>
+                                            <div>
+                                                <h3 class="text-center">暂时还没有相关食谱，期待你的制作！ </h3>
+                                            </div>
+                                            <%}else{%>
                                             <c:forEach begin="0" end="${menuInfoPage.list.size()-1}" var="num">
                                                 <div class="product-col col-lg-3 col-md-4 col-sm-6">
                                                     <div class="product-col">
@@ -436,10 +441,16 @@
                                                     </div>
                                                 </div>
                                             </c:forEach>
+                                            <%}%>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="tab-pane" id="list">
+                                    <% if (((List)request.getAttribute("menuInfoList")).size() == 0){%>
+                                    <div>
+                                        <h3 class="text-center">暂时还没有相关食谱，期待你的制作！ </h3>
+                                    </div>
+                                    <%}else{%>
                                     <c:forEach begin="0" end="${menuInfoPage.list.size()-1}" var="num">
                                         <div class="shop-product-list-wrap">
                                             <div class="row product-layout-list">
@@ -471,6 +482,7 @@
                                             </div>
                                         </div>
                                     </c:forEach>
+                                    <%}%>
                                 </div>
                             </div>
                             </div>

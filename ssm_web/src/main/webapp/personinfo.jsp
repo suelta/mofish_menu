@@ -444,7 +444,7 @@
 
                 <%--菜单显示--%>
                 <div class="product-area section-pt-30" style="height: 600px;overflow: auto">
-                    <div class="container">
+                        <div class="container">
                         <div class="row row-8 product-two-row-4">
                             <%-- 事件：菜谱显示 --%>
                             <% if (((List)request.getAttribute("menuInfoList")).size() == 0){%>

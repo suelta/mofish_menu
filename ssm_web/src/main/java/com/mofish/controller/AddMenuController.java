@@ -75,7 +75,7 @@ public class AddMenuController {
         menuDescService.addMenuDesc(menuDesc);
 
         //插入menulike
-        menuLikeService.addMenuLike(menuInfo.getMid());
+            menuLikeService.addMenuLike(menuInfo.getMid());
 
         //menumethod
         MenuMethod menuMethod = new MenuMethod();

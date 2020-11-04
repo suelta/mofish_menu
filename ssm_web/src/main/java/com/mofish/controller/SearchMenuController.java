@@ -51,6 +51,7 @@ public class SearchMenuController {
         mv.addObject("userInfoPage", userInfoPage);
         mv.addObject("menuLikePage", menuLikePage);
         mv.addObject("searchString", mname);
+        mv.addObject("menuInfoList", menuInfoList);
         mv.setViewName("searchmenu");
         return mv;
 

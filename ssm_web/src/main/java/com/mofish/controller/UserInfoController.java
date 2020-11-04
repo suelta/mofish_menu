@@ -158,8 +158,10 @@ public class UserInfoController {
         Map map = new HashMap();
         Boolean flag;
 
+        System.out.println("============================"+userInfo.toString());
+
         //输入框是否为空
-        if(userInfo.getUname() == ""|| userInfo.getUpwd() == ""|| userInfo.getUtel() == ""|| userInfo.getUbrith() == null){
+        if(userInfo.getUname() == ""|| userInfo.getUpwd() == ""|| userInfo.getUtel() == ""){    // || userInfo.getUbrith() == null
             map.put("flag", "null");
             // 将map转换为json给前台
             Gson gson = new Gson();
